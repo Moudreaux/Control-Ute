@@ -75,4 +75,7 @@ Public Class FrmFacturas
         TxtLectura.Focus()
     End Sub
 
+    Private Sub FrmFacturas_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Principal.ActualizaDatos()
+    End Sub
 End Class
