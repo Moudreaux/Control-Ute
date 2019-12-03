@@ -14,6 +14,14 @@ Public Class Principal
     End Sub
 
     Private Sub Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ActualizaDatos()
+    End Sub
+
+    Private Sub dtpproxima_ValueChanged(sender As Object, e As EventArgs) Handles dtpproxima.ValueChanged
+        estimadatos()
+    End Sub
+
+    Sub ActualizaDatos()
         Dim consumoantes, consumoahora As Integer
         Try
             Dim aux As New DataTable
@@ -58,11 +66,6 @@ Public Class Principal
             MsgBox(ex.Message, MsgBoxStyle.Critical)
         End Try
     End Sub
-
-    Private Sub dtpproxima_ValueChanged(sender As Object, e As EventArgs) Handles dtpproxima.ValueChanged
-        estimadatos()
-    End Sub
-
     Sub estimadatos()
         TxtDiasEstimados.Text = Int(DateAndTime.DateDiff("d", txtdesde.Text, dtpproxima.Value))
         TxtConsumoEstimado.Text = Math.Ceiling(TxtDiasEstimados.Text * txtdiario.Text)
