@@ -69,4 +69,7 @@ Public Class FrmLecturas
         End Try
     End Sub
 
+    Private Sub FrmLecturas_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        Principal.ActualizaDatos()
+    End Sub
 End Class
