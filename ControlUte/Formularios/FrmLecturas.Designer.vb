@@ -106,7 +106,7 @@ Partial Class FrmLecturas
         Me.BtnAgregar.Name = "BtnAgregar"
         Me.BtnAgregar.Size = New System.Drawing.Size(67, 31)
         Me.BtnAgregar.TabIndex = 7
-        Me.BtnAgregar.Text = "Agregar"
+        Me.BtnAgregar.Text = "º"
         Me.BtnAgregar.UseVisualStyleBackColor = True
         '
         'TxtLectura

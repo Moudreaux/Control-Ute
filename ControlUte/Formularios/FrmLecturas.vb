@@ -23,8 +23,7 @@ Public Class FrmLecturas
             MsgBox("Faltan datos", vbCritical, "Atención")
         Else
             If Convert.ToInt32(TxtLectura.Text) < Convert.ToInt32(LblUltimo.Text) Then
-                MsgBox("La lectura no puede ser inferior a la anterior", vbInformation, "Atención")
-                'TxtLectura.SelectAll()
+                MsgBox("La lectura no puede ser inferior a la anterior registrada", vbInformation, "Atención")
                 TxtLectura.Focus()
             Else
                 Try
@@ -63,7 +62,6 @@ Public Class FrmLecturas
                 DgvLecturas.DataSource = ""
             End If
             DgvLecturas.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-            'DgvLecturas.Columns["Lectura"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical)
         End Try
